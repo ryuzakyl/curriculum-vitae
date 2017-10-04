@@ -105,11 +105,11 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
-      \fontsize{30pt}{62pt}\color{header}%
+      \fontsize{24pt}{50pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
     \node [anchor=north] at (name.south) {%
-      \fontsize{14pt}{24pt}\color{pblue}%
+      \fontsize{10pt}{18pt}\color{pblue}%
       \bodyfont #3%
     };
   \end{tikzpicture}
@@ -205,7 +205,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{pblue} ##1}
   }
-  \begin{textblock}{3.6}(2.0, 0.55)
+  \begin{textblock}{4.2}(1.4, 3.05)
   \begin{flushright}
   \obeycr
 }{%
