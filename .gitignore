@@ -1,0 +1,9 @@
+# exclude auto-generated files from compilation
+*.aux
+*.bcf
+*.log
+*.out
+*.pdf
+*.run.xml
+*.synctex.gz
+
