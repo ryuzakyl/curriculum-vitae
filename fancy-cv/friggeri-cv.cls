@@ -193,6 +193,22 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   }\\}
 
 
+\setlength{\tabcolsep}{0pt}
+\newenvironment{paperlist}{%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+}{%
+  \end{tabular*}
+}
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\paperentry}[4]{%
+  #1&\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=pblue} #3}\\%
+    #4\vspace{-0.4cm}%
+  }\\}
+
+
 %%%%%%%%%%%%%%
 % Side block %
 %%%%%%%%%%%%%%
