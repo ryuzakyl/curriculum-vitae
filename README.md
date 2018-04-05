@@ -13,7 +13,7 @@ The LaTeX source code for my CV.
     * Spanish version file (`./fancy-cv/cv-es-normal.tex`)
 * other templates are still a work in progress.
 
-## How to generate/build pdf file
+## How to generate/build the .pdf file
 
 ### From the command line
 
