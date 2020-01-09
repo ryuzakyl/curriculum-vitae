@@ -346,3 +346,29 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%
+% Smart Diagrams %
+%%%%%%%%%%%%%%%%%%
+
+\usepackage{smartdiagram}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.35cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.35cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.35cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, orange, green},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 1,
+}
