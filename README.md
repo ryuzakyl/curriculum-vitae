@@ -19,8 +19,9 @@ The LaTeX source code for my CV.
 
 For example, generating the .pdf for the english version of my regular CV in a `fancy` template
 
-```bash
-xelatex ./fancy-cv/cv-en-normal.tex
+```console
+$ cd fancy-cv
+$ xelatex cv-en-normal.tex
 ```
 
 ### Using Texmaker
