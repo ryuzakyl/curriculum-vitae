@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up Git repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Compile LaTeX document
@@ -27,8 +27,8 @@ jobs:
         with:
           name: PDF
           path: |
-            ./cv-en-industry-succinct.pdf
-            ./cv-es-industry-succinct.pdf
+            ./fancy-cv/cv-en-industry-succinct.pdf
+            ./fancy-cv/cv-es-industry-succinct.pdf
 
       # - name: Create Release
       #   id: create_release
