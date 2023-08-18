@@ -48,8 +48,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.next.outputs.version }}
-          release_name: Release ${{ steps.next.outputs.version }}
+          tag_name: 1.3.1 # ${{ steps.next.outputs.version }}
+          release_name: Release 1.3.1 # ${{ steps.next.outputs.version }}
           draft: false
           prerelease: false
 
