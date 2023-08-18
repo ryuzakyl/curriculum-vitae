@@ -25,7 +25,7 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: cv-en-es
+          name: cv-en-es.zip
           path: |
             ./fancy-cv/cv-en-industry-succinct.pdf
             ./fancy-cv/cv-es-industry-succinct.pdf
