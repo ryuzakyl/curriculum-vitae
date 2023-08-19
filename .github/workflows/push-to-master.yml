@@ -22,31 +22,21 @@ jobs:
             cv-es-industry-succinct.tex
           latexmk_use_xelatex: true
 
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
-        with:
-          name: cv-en-es.zip
-          path: |
-            ./fancy-cv/cv-en-industry-succinct.pdf
-            ./fancy-cv/cv-es-industry-succinct.pdf
-
-      # - name: Get previous tag
-      #   id: previoustag
-      #   uses: WyriHaximus/github-action-get-previous-tag@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Get next version
-      #   id: next
-      #   uses: WyriHaximus/github-action-next-release-version@1.0.0
+      # - name: Upload PDF file
+      #   uses: actions/upload-artifact@v3
       #   with:
-      #     version: ${{ steps.previoustag.outputs.tag }}
+      #     name: cv-en-es.zip
+      #     path: |
+      #       ./fancy-cv/cv-en-industry-succinct.pdf
+      #       ./fancy-cv/cv-es-industry-succinct.pdf
 
       - name: Get previous tag
         id: previoustag
         uses: WyriHaximus/github-action-get-previous-tag@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          fallback: 1.4.0
       - name: Get next version
         id: next
         uses: WyriHaximus/github-action-next-release-version@1.0.0
