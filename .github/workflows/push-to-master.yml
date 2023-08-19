@@ -37,20 +37,18 @@ jobs:
         uses: WyriHaximus/github-action-get-previous-tag@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # with:
-        #   fallback: 1.4.0
 
-      # - name: Get next version
-      #   id: next
-      #   uses: WyriHaximus/github-action-next-release-version@1.0.0
-      #   with:
-      #     version: ${{ steps.previoustag.outputs.tag }}
-
-      - name: 'Get next minor version'
-        id: semvers
-        uses: "WyriHaximus/github-action-next-semvers@v1"
+      - name: Get next version
+        id: next
+        uses: WyriHaximus/github-action-next-release-version@1.0.0
         with:
           version: ${{ steps.previoustag.outputs.tag }}
+
+      # - name: 'Get next minor version'
+      #   id: semvers
+      #   uses: "WyriHaximus/github-action-next-semvers@v1"
+      #   with:
+      #     version: ${{ steps.previoustag.outputs.tag }}
 
       - name: Create Release
         id: create_release
@@ -58,8 +56,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name:  ${{ steps.semvers.outputs.patch }}
-          release_name: Release ${{ steps.semvers.outputs.patch }}
+          tag_name:   ${{ steps.next.outputs.version }}
+          release_name: Release  ${{ steps.next.outputs.version }}
           draft: false
           prerelease: false
 
