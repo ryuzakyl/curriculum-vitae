@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Required due to the way Git works, without it this action won't be able to find any or the correct tags
 
       # - name: Compile LaTeX document
       #   uses: xu-cheng/latex-action@v2
@@ -35,11 +37,18 @@ jobs:
         uses: WyriHaximus/github-action-get-previous-tag@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          fallback: 1.4.0
-      - name: Get next version
-        id: next
-        uses: WyriHaximus/github-action-next-release-version@1.0.0
+        # with:
+        #   fallback: 1.4.0
+
+      # - name: Get next version
+      #   id: next
+      #   uses: WyriHaximus/github-action-next-release-version@1.0.0
+      #   with:
+      #     version: ${{ steps.previoustag.outputs.tag }}
+
+      - name: 'Get next minor version'
+        id: semvers
+        uses: "WyriHaximus/github-action-next-semvers@v1"
         with:
           version: ${{ steps.previoustag.outputs.tag }}
 
@@ -49,8 +58,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name:  ${{ steps.next.outputs.version }}
-          release_name: Release ${{ steps.next.outputs.version }}
+          tag_name:  ${{ steps.semvers.outputs.patch }}
+          release_name: Release ${{ steps.semvers.outputs.patch }}
           draft: false
           prerelease: false
 
