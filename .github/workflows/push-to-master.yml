@@ -15,14 +15,14 @@ jobs:
         with:
           fetch-depth: 0 # Required due to the way Git works, without it this action won't be able to find any or the correct tags
 
-      # - name: Compile LaTeX document
-      #   uses: xu-cheng/latex-action@v2
-      #   with:
-      #     working_directory: fancy-cv
-      #     root_file: |
-      #       cv-en-industry-succinct.tex
-      #       cv-es-industry-succinct.tex
-      #     latexmk_use_xelatex: true
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: fancy-cv
+          root_file: |
+            cv-en-industry-succinct.tex
+            cv-es-industry-succinct.tex
+          latexmk_use_xelatex: true
 
       - name: Get previous tag
         id: previoustag
