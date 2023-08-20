@@ -93,3 +93,5 @@ jobs:
           gh release upload ${{ steps.semvers.outputs.patch }} \
             ./fancy-cv/cv-en-industry-succinct.pdf \
             ./fancy-cv/cv-es-industry-succinct.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
