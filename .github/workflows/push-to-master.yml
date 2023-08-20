@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-publish-cv-release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -48,33 +50,46 @@ jobs:
           esac
           echo "date=$(date +'%B') $DAY, $(date +%Y)" >> $GITHUB_ENV
 
-      - name: Create release
+      # - name: Create release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: ${{ steps.semvers.outputs.patch }}
+      #     release_name: Software Industry CV versions. ${{ env.date }}
+      #     draft: false
+      #     prerelease: false
+
+      # - name: Attach 'cv-en-industry-succinct.pdf' to the Release
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: ./fancy-cv/cv-en-industry-succinct.pdf
+      #     asset_name: cv-en-industry-succinct.pdf
+      #     asset_content_type: application/pdf
+
+      # - name: Attach 'cv-es-industry-succinct.pdf' to the Release
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: ./fancy-cv/cv-es-industry-succinct.pdf
+      #     asset_name: cv-es-industry-succinct.pdf
+      #     asset_content_type: application/pdf
+
+      - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        run: |
+          gh release create ${{ steps.semvers.outputs.patch }} --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name:  ${{ steps.semvers.outputs.patch }}
-          release_name: Software Industry CV versions. ${{ env.date }}
-          draft: false
-          prerelease: false
 
-      - name: Attach 'cv-en-industry-succinct.pdf' to the Release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./fancy-cv/cv-en-industry-succinct.pdf
-          asset_name: cv-en-industry-succinct.pdf
-          asset_content_type: application/pdf
-
-      - name: Attach 'cv-es-industry-succinct.pdf' to the Release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./fancy-cv/cv-es-industry-succinct.pdf
-          asset_name: cv-es-industry-succinct.pdf
-          asset_content_type: application/pdf
+      - name: Upload Artifact to Release
+          run: |
+            gh release upload ${{ steps.semvers.outputs.patch }} \
+              ./fancy-cv/cv-en-industry-succinct.pdf \
+              ./fancy-cv/cv-es-industry-succinct.pdf
