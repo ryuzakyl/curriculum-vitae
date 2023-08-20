@@ -89,7 +89,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Artifact to Release
-          run: |
-            gh release upload ${{ steps.semvers.outputs.patch }} \
-              ./fancy-cv/cv-en-industry-succinct.pdf \
-              ./fancy-cv/cv-es-industry-succinct.pdf
+        run: |
+          gh release upload ${{ steps.semvers.outputs.patch }} \
+            ./fancy-cv/cv-en-industry-succinct.pdf \
+            ./fancy-cv/cv-es-industry-succinct.pdf
