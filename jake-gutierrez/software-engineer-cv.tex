@@ -1,0 +1,397 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Victor M. Mendiola Lau} \\ \vspace{1pt}
+    320 Flagami Blvd, Miami, FL 33144 \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ (+1) 786 630 0166 ~ \href{mailto:ryuzakyl@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{ryuzakyl@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/victormendiolalau}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/victormendiolalau}}  ~
+    \href{https://github.com/ryuzakyl}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/ryuzakyl}}
+    \vspace{-8pt}
+\end{center}
+
+%
+%-----------PROGRAMMING SKILLS-----------
+
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Programming}{: C\# (10 years), Python (8 years), C++ (4 years), Java (2 years), Golang (1 year), Git, GitHub, Linux.} \\
+      \textbf{Web}{: HTML5, CSS3, Javascript, ASP.NET MVC/Core, Django/DRF, WordPress.} \\
+      \textbf{Machine Learning/AI \& Data Analysis}{: LangChain, Numpy, SciPy, Pandas, scikit-learn, Matplotlib, OpenCV.} \\
+      \textbf{Cloud \& DevOps}{: Docker, Kubernetes, Terraform, Redis, Kafka, AWS, Azure.} \\
+      \textbf{Databases}{: SQL, MS SQL Server, PostgreSQL, MySQL.} \\
+      \textbf{Languages}{: Spanish (native), English (native), French (intermediate).} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------EXPERIENCE-----------
+
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {LaceUp Solutions, Inc.}{2023 -- }
+      {Software Engineer}{Miami, FL}
+      \resumeItemListStart
+        \resumeItem{Worked in a data-intensive .NET DevExpress desktop application implementing efficient algorithms to handle large database operations.}
+        \resumeItem{Configured a resilient data layer (Azure SQL Server databases with replication, failover, etc.) to enhance system reliability, allow high availability and data integrity.}
+        \resumeItem{Designed and maintained GitHub workflows to ensure an efficient and reliable software release and version management processes.}
+        \resumeItem{Leveraged LLMs with LangChain to streamline organization operations by enabling interactive "chat" capabilities with business data.}
+      \resumeItemListEnd
+      \begin{itemize}[leftmargin=0.0in, label={}]
+        \small{
+          \item{
+            \emph{Technologies}{: .NET, C\#, SQL, Entity Framework, DevExpress, MS SQL Server, Azure.} \\
+          }
+        }
+      \end{itemize}
+
+    \resumeSubheading
+      {Rolla Finance}{2022 -- 2023}
+      {Software/DevOps Engineer (Remote)}{Málaga, Spain}
+      \resumeItemListStart
+        \resumeItem{Configured and optimized our AWS cloud infrastructure using Terraform and K8s leading to reduced provisioning time.}
+        \resumeItem{Setup OAuth2 authentication for our public API documentation and other security related configurations (TLS, GeoIP blocking, rate limiting, etc.).}
+        \resumeItem{Integrated Prometheus and Grafana for enhanced observability, and optimized resource allocation, reducing infrastructure costs by 35\%.}
+        \resumeItem{Designed and implemented load/stress testing protocols, enabling the system to horizontally scale and handle increased traffic.}
+      \resumeItemListEnd
+      \begin{itemize}[leftmargin=0.0in, label={}]
+        \small{
+          \item{
+            \emph{Technologies}{: AWS, K8s, Docker, Python, Terraform, PostgreSQL, Apache Kafka, Redis, Prometheus, Grafana.} \\
+          }
+        }
+      \end{itemize}
+
+
+    \resumeSubheading
+      {Novoshore}{2020 -- 2021}
+      {Senior Fullstack Web Developer}{Málaga, Spain}
+      \resumeItemListStart
+        \resumeItem{Delivered features meeting stringent financial industry standards and regulatory requirements for a Swiss Fintech startup.}
+        \resumeItem{Developed and containerize multiple microservices (e.g. document storage) built with Spring Boot, enhancing deployment efficiency and consistency.}
+        % \resumeItem{Relied on vertical slicing to develop solid features in our web application.}
+    \resumeItemListEnd
+    \begin{itemize}[leftmargin=0.0in, label={}]
+      \small{
+        \item{
+          \emph{Technologies}{: .Node.js, Javascript, Spring Boot, Java, Angular, PostgreSQL, Docker.} \\
+        }
+      }
+    \end{itemize}
+
+    \resumeSubheading
+      {Freelance}{2019 -- 2020}
+      {Fullstack Web Developer (Remote)}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Worked in the ground-up development of a FIFA member organization's official website.}
+        \resumeItem{Drove the development of key features, including responsive design, content management integration, and performance optimization.}
+      \resumeItemListEnd
+    \begin{itemize}[leftmargin=0.0in, label={}]
+      \small{
+        \item{
+          \emph{Technologies}{:  Wordpress, PHP, HTML, CSS3, JavaScript, MySQL, etc.} \\
+        }
+      }
+    \end{itemize}
+
+    \resumeSubheading
+      {Kitsune Technologies}{2018 -- 2019}
+      {Software Engineer (Remote)}{Tennessee, USA}
+      \resumeItemListStart
+        \resumeItem{Developed and deployed machine learning models in areas such as Speech segmentation and Computer Vision.}
+        \resumeItem{Architected and implemented scalable API and microservices infrastructure to support our web applications.}
+      \resumeItemListEnd
+    \begin{itemize}[leftmargin=0.0in, label={}]
+      \small{
+        \item{
+          \emph{Technologies}{: Python, numpy, pandas, OpenCV, Flask, Vue.js, C\#, etc.} \\
+        }
+      }
+    \end{itemize}
+
+    \resumeSubheading
+      {Freelance}{2017 -- 2018}
+      {Fullstack Web Developer (Remote)}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Developed and implemented many features in a web-based workforce management solution using a proprietary PHP framework.}
+        \resumeItem{Built a robust backend foundation by crafting efficient SQL queries and optimizing database structures, ensuring optimal application performance and long-term maintainability.}
+      \resumeItemListEnd
+    \begin{itemize}[leftmargin=0.0in, label={}]
+      \small{
+        \item{
+          \emph{Technologies}{: PHP, HTML, CSS3, JavaScript, jQuery, SQL, MySQL, etc.} \\
+        }
+      }
+    \end{itemize}
+
+    \resumeSubheading
+      {Project-Based Freelance}{2014 -- 2017}
+      {Python Backend Engineer (Remote) $|$ \emph{Python, Flask, Celery, Redis}}{}
+      \resumeItemListStart
+        \resumeItem{Used Selenium and ChromeDriver combined with Celery and Redis to develop a REST API simulating user behavior to bypass CAPTCHA-based security.}
+      \resumeItemListEnd
+
+      {Python Backend Engineer (Remote) $|$ \emph{Python, Django, DRF, JWT Authentication}}{}
+      \vspace{-8pt}
+      \resumeItemListStart
+        \resumeItem{Developed a REST API from the ground up with JWT Authentication, automatic reports generation (.pdf, .csv), etc.}
+      \resumeItemListEnd
+
+      {Ruby Backend Engineer (Remote) $|$ \emph{Ruby, Ruby on Rails}}{}
+      \vspace{-8pt}
+      \resumeItemListStart
+        \resumeItem{Completely engineered and developed an API relying on Json Web Token (JWT) for authentication.}
+      \resumeItemListEnd
+
+      {Ruby Backend Engineer (Remote) $|$ \emph{Ruby}}{}
+      \vspace{-8pt}
+      \resumeItemListStart
+        \resumeItem{Completely engineered and developed a multi-threaded and concurrent service for consuming real time stock market data.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {CENATAV}{2013 -- 2017}
+      {Data Science and Machine Learning Engineer}{Havana, Cuba}
+      \resumeItemListStart
+        \resumeItem{Leveraged data science and machine learning expertise to develop innovative pattern recognition solutions that were used in real world applications.}
+        \resumeItem{Accelerated research to production flows by designing efficient algorithms and validation strategies.}
+      \resumeItemListEnd
+    \begin{itemize}[leftmargin=0.0in, label={}]
+      \small{
+        \item{
+          \emph{Technologies}{: .NET, C\#, C++, Python, numpy, Pandas, scikit-learn, OpenCV, MATLAB, etc.} \\
+        }
+      }
+    \end{itemize}
+
+  \resumeSubHeadingListEnd
+
+  \vspace{-16pt}
+
+%-----------EDUCATION-----------
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Jaén}{2019 -- 2021}
+      {M.Sc. in Cyber Security}{Jaén, Spain}
+      \begin{itemize}[leftmargin=0.0in, label={}]
+        \small{
+          \item{
+            \emph{Thesis}{: Study and implementation of security controls for Kubernetes clusters} \\
+          }
+        }
+     \end{itemize}
+    \resumeSubheading
+      {University of Havana}{2008 -- 2013}
+      {B.Sc. in Computer Science (Summa cum laude)}{Havana, Cuba}
+      \begin{itemize}[leftmargin=0.0in, label={}]
+        \small{
+          \item{
+            \emph{Thesis}{: Iris Recognition using Functional Data Analysis (FDA)} \\
+          }
+        }
+     \end{itemize}
+  \resumeSubHeadingListEnd
+
+
+%------RELEVANT COURSEWORK-------
+% \section{Relevant Coursework}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Data Structures
+%                 \item Software Methodology
+%                 \item Algorithms Analysis
+%                 \item Database Management
+%                 \item Artificial Intelligence
+%                 \item Internet Technology
+%                 \item Systems Programming
+%                 \item Computer Architecture
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+%-----------INVOLVEMENT---------------
+
+\section{Research \& Teaching}
+    \resumeSubHeadingListStart
+
+      \resumeSubheading{University of Seville}{2018}{Visiting Researcher}{Seville, Spain}
+          \resumeItemListStart
+              \resumeItem{Conducted research and developed computer vision algorithms for human silhouette detection, object tracking, etc.}
+          \resumeItemListEnd
+
+          \resumeSubheading{University of Havana}{2017 -- 2018}{Instructor Professor}{Havana, Cuba}
+          \resumeItemListStart
+              \resumeItem{Math instructor of topics such as Set theory, Functions, Algebra, Calculus, Numerical math and Ordinary Differential Equations.}
+          \resumeItemListEnd
+
+          \resumeSubheading{CENATAV}{2013 -- 2017}{Researcher}{Havana, Cuba}
+          \resumeItemListStart
+              \resumeItem{Design and development of Pattern Recognition Systems. Junior researcher and PhD. student. Interest on topics like Machine Learning, Data Analysis, Data Representation and Computer Vision.}
+          \resumeItemListEnd
+
+          % \resumeSubheading{CENATAV}{2012}{Research internship}{Havana, Cuba}
+          % \resumeItemListStart
+          %     \resumeItem{Design and implementation of an iris encoding method based on Functional Data Analysis (FDA).}
+          % \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+
+% \section{Other Projects}
+%     \vspace{-5pt}
+%     \resumeSubHeadingListStart
+%         \resumeProjectHeading
+%           {\textbf{twitter-language-detection} $|$ \emph{Python, Matplotlib}}{2018}
+%           \resumeItemListStart
+%             \resumeItem{Developed an implementation for language detection in tweets using traditional NLP techniques and visualization for data analysis.}
+%           \resumeItemListEnd
+
+%           \vspace{-13pt}
+
+%         \resumeProjectHeading
+%           {\textbf{data-bloodhound} $|$ \emph{Python, numpy, scikit-learn, C++}}{2017}
+%           \resumeItemListStart
+%             \resumeItem{Developed a toolbox for data analysis with the aim of ease validation and implementation of Pattern Recognition and Big Data solutions.}
+%           \resumeItemListEnd
+
+%           \vspace{-13pt}
+
+%         \resumeProjectHeading
+%           {\textbf{yapir (Yet Another Platform for Iris Recognition)} $|$ \emph{Python, numpy, scikit-learn, Qt}}{2013}
+%           \resumeItemListStart
+%             \resumeItem{Created a platform/application allowing to perform basic Iris Recognition tasks using FDA-based algorithms.}
+%           \resumeItemListEnd
+
+%     \resumeSubHeadingListEnd
+% \vspace{-15pt}
+
+\end{document}
